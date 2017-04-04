@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transport", "Transport\Transport.csproj", "{96A63AA5-73CA-4C99-98FB-F5CD84ED9438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportConsole", "TransportConsole\TransportConsole.csproj", "{988198E6-3FB4-49C6-B8D1-C820CDA661E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "WinForms\WinForms.csproj", "{B91C33A5-8E0C-46A4-B29E-D5A0B976C008}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96A63AA5-73CA-4C99-98FB-F5CD84ED9438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A63AA5-73CA-4C99-98FB-F5CD84ED9438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A63AA5-73CA-4C99-98FB-F5CD84ED9438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A63AA5-73CA-4C99-98FB-F5CD84ED9438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{988198E6-3FB4-49C6-B8D1-C820CDA661E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{988198E6-3FB4-49C6-B8D1-C820CDA661E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{988198E6-3FB4-49C6-B8D1-C820CDA661E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{988198E6-3FB4-49C6-B8D1-C820CDA661E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91C33A5-8E0C-46A4-B29E-D5A0B976C008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91C33A5-8E0C-46A4-B29E-D5A0B976C008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91C33A5-8E0C-46A4-B29E-D5A0B976C008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91C33A5-8E0C-46A4-B29E-D5A0B976C008}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
