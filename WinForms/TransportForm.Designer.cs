@@ -81,7 +81,7 @@
             this.GroupBox1.Controls.Add(this.TransportComboBox);
             this.GroupBox1.Location = new System.Drawing.Point(12, 12);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(165, 355);
+            this.GroupBox1.Size = new System.Drawing.Size(172, 355);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
             // 
@@ -95,7 +95,7 @@
             this.HelicopterGroupBox.Controls.Add(this.label7);
             this.HelicopterGroupBox.Controls.Add(this.label6);
             this.HelicopterGroupBox.Controls.Add(this.label5);
-            this.HelicopterGroupBox.Location = new System.Drawing.Point(166, 61);
+            this.HelicopterGroupBox.Location = new System.Drawing.Point(172, 61);
             this.HelicopterGroupBox.Name = "HelicopterGroupBox";
             this.HelicopterGroupBox.Size = new System.Drawing.Size(150, 246);
             this.HelicopterGroupBox.TabIndex = 6;
@@ -114,6 +114,7 @@
             this.SpacingHelicopterTextBox.Name = "SpacingHelicopterTextBox";
             this.SpacingHelicopterTextBox.Size = new System.Drawing.Size(41, 20);
             this.SpacingHelicopterTextBox.TabIndex = 6;
+            this.SpacingHelicopterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SpacingHelicopterTextBox_KeyPress);
             // 
             // VolumeHelicopterTextBox
             // 
@@ -121,6 +122,7 @@
             this.VolumeHelicopterTextBox.Name = "VolumeHelicopterTextBox";
             this.VolumeHelicopterTextBox.Size = new System.Drawing.Size(119, 20);
             this.VolumeHelicopterTextBox.TabIndex = 5;
+            this.VolumeHelicopterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VolumeHelicopterTextBox_KeyPress);
             // 
             // FuelHelicopterTextBox
             // 
@@ -128,6 +130,7 @@
             this.FuelHelicopterTextBox.Name = "FuelHelicopterTextBox";
             this.FuelHelicopterTextBox.Size = new System.Drawing.Size(95, 20);
             this.FuelHelicopterTextBox.TabIndex = 4;
+            this.FuelHelicopterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FuelHelicopterTextBox_KeyPress);
             // 
             // label8
             // 
@@ -175,7 +178,7 @@
             this.CarGroupBox.Controls.Add(this.label2);
             this.CarGroupBox.Location = new System.Drawing.Point(6, 61);
             this.CarGroupBox.Name = "CarGroupBox";
-            this.CarGroupBox.Size = new System.Drawing.Size(150, 246);
+            this.CarGroupBox.Size = new System.Drawing.Size(160, 246);
             this.CarGroupBox.TabIndex = 5;
             this.CarGroupBox.TabStop = false;
             // 
@@ -192,6 +195,7 @@
             this.SpacingCarTextBox.Name = "SpacingCarTextBox";
             this.SpacingCarTextBox.Size = new System.Drawing.Size(41, 20);
             this.SpacingCarTextBox.TabIndex = 4;
+            this.SpacingCarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SpacingCarTextBox_KeyPress);
             // 
             // CurentFuelCarTextBox
             // 
@@ -199,6 +203,7 @@
             this.CurentFuelCarTextBox.Name = "CurentFuelCarTextBox";
             this.CurentFuelCarTextBox.Size = new System.Drawing.Size(113, 20);
             this.CurentFuelCarTextBox.TabIndex = 3;
+            this.CurentFuelCarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CurentFuelCarTextBox_KeyPress);
             // 
             // label4
             // 
@@ -239,7 +244,7 @@
             this.HybridCarGroupBox.Controls.Add(this.label11);
             this.HybridCarGroupBox.Controls.Add(this.label10);
             this.HybridCarGroupBox.Controls.Add(this.label9);
-            this.HybridCarGroupBox.Location = new System.Drawing.Point(322, 61);
+            this.HybridCarGroupBox.Location = new System.Drawing.Point(319, 61);
             this.HybridCarGroupBox.Name = "HybridCarGroupBox";
             this.HybridCarGroupBox.Size = new System.Drawing.Size(152, 246);
             this.HybridCarGroupBox.TabIndex = 4;
@@ -251,6 +256,7 @@
             this.ElectricityHybridTextBox.Name = "ElectricityHybridTextBox";
             this.ElectricityHybridTextBox.Size = new System.Drawing.Size(79, 20);
             this.ElectricityHybridTextBox.TabIndex = 9;
+            this.ElectricityHybridTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ElectricityHybridTextBox_KeyPress);
             // 
             // PowerHybridTextBox
             // 
@@ -258,6 +264,7 @@
             this.PowerHybridTextBox.Name = "PowerHybridTextBox";
             this.PowerHybridTextBox.Size = new System.Drawing.Size(100, 20);
             this.PowerHybridTextBox.TabIndex = 8;
+            this.PowerHybridTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PowerHybridTextBox_KeyPress);
             // 
             // SpacingHybridTextBox
             // 
@@ -265,6 +272,7 @@
             this.SpacingHybridTextBox.Name = "SpacingHybridTextBox";
             this.SpacingHybridTextBox.Size = new System.Drawing.Size(41, 20);
             this.SpacingHybridTextBox.TabIndex = 7;
+            this.SpacingHybridTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SpacingHybridTextBox_KeyPress);
             // 
             // FuelHybridTextBox
             // 
@@ -272,6 +280,7 @@
             this.FuelHybridTextBox.Name = "FuelHybridTextBox";
             this.FuelHybridTextBox.Size = new System.Drawing.Size(100, 20);
             this.FuelHybridTextBox.TabIndex = 6;
+            this.FuelHybridTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FuelHybridTextBox_KeyPress);
             // 
             // NameHybridTextBox
             // 
@@ -375,7 +384,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(189, 379);
+            this.ClientSize = new System.Drawing.Size(196, 379);
             this.Controls.Add(this.GroupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddForm";

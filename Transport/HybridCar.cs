@@ -75,7 +75,7 @@ namespace Transport
         /// <summary>
         /// Текущее количество  эл-ва
         /// </summary>
-        public double CurrentAmountOfElectricity
+        public int CurrentAmountOfElectricity
         { get; set; }
 
          /// <summary>
@@ -101,7 +101,7 @@ namespace Transport
             set
             {
                 if (value < 20||value>100)
-                    throw new InvalidOperationException();
+                    throw new InvalidOperationException("Мощность аккумулятора должна быть не больше 100 и не меньше 20");
                 _powerOfBattery = value;
 
             }
@@ -116,10 +116,7 @@ namespace Transport
             {
                 return IsCanTravelDistance();
             }
-            set
-            {
-
-            }
+            set { }
         }
 
         /// <summary>

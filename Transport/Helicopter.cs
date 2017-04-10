@@ -44,7 +44,7 @@ namespace Transport
             set
             {
                 if (value < 380)
-                    throw new InvalidOperationException("Неверно задан расход топлива у вертолета(за час)");
+                    throw new InvalidOperationException("Расход топлива у вертолета должен быть больше 380");
                 _fuelConsumptionPerHour = value;
             }
         }
@@ -57,7 +57,7 @@ namespace Transport
             set
             {
                 if (value < 100)
-                    throw new InvalidOperationException("Неверно задан расход топлива у вертолета");
+                    throw new InvalidOperationException("Неверно задан расход топлива у вертолета(больше 380)");
                 _fuelConsumption = value;
             }
         }
@@ -110,7 +110,7 @@ namespace Transport
             set
             {
                 if (value <= 0 || value >= 200)
-                    throw new InvalidOperationException("Неверный объем бака");
+                    throw new InvalidOperationException("Объем бака не должен превышать 200 л");
                 _volumeOfTheHelicopter = value;
             }
         }
@@ -135,10 +135,7 @@ namespace Transport
             {
                 return IsCanTravelDistance();
             }
-            set
-            {
-
-            }
+            set { }
         }
     }
 }

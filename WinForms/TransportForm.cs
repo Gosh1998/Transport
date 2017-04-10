@@ -28,7 +28,7 @@ namespace WinForms
                     var car = new Car
                     {
                         Distance = Convert.ToInt32(SpacingCarTextBox.Text),
-                        TheCurrentAmountOfFuel = Convert.ToInt32(CurentFuelCarTextBox.Text),
+                        TheCurrentAmountOfFuel = Convert.ToDouble(CurentFuelCarTextBox.Text),
                         TransportName = Convert.ToString(NameCarTextBox.Text)
                     };
                     _transport = car;
@@ -39,7 +39,7 @@ namespace WinForms
                     {
                         TransportName = Convert.ToString(NameHybridTextBox.Text),
                         Distance = Convert.ToInt32(SpacingHybridTextBox.Text),
-                        CurrentAmountOfElectricity = Convert.ToDouble(ElectricityHybridTextBox.Text),
+                        CurrentAmountOfElectricity = Convert.ToInt32(ElectricityHybridTextBox.Text),
                         PowerOfBattery = Convert.ToInt32(PowerHybridTextBox.Text),
                         TheCurrentAmountOfFuel = Convert.ToDouble(FuelHybridTextBox.Text)
                     };
@@ -127,8 +127,16 @@ namespace WinForms
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            try
+            {
+                var a = this.Transport;
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            catch (Exception exept)
+            {
+                MessageBox.Show(exept.Message);
+            }
         }
 
         private void TransportComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -157,6 +165,60 @@ namespace WinForms
         {
             this.DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void SpacingCarTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)&&e.KeyChar!=8)
+                e.Handled = true;
+        }
+
+        private void VolumeHelicopterTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void SpacingHelicopterTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void FuelHelicopterTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ',')
+                e.Handled = true;
+        }
+
+        private void PowerHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void ElectricityHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void FuelHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar!=',')
+                e.Handled = true;
+        }
+
+        private void SpacingHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void CurentFuelCarTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar!=',')
+                e.Handled = true;
         }
     }
 }

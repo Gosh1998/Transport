@@ -38,13 +38,13 @@
             this.CreateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.TransportDataGridView = new System.Windows.Forms.DataGridView();
-            this.TransportNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FuelCosts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITransportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RemoveButton = new System.Windows.Forms.Button();
             this.ModifyButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.TransportNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITransportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MenuStrip1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransportDataGridView)).BeginInit();
@@ -77,6 +77,7 @@
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             this.ExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ExitToolStripMenuItem.Text = "Создать";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // OpenToolStripMenuItem
             // 
@@ -131,30 +132,12 @@
             this.TransportDataGridView.Size = new System.Drawing.Size(493, 206);
             this.TransportDataGridView.TabIndex = 0;
             // 
-            // TransportNameDataGridViewTextBoxColumn
-            // 
-            this.TransportNameDataGridViewTextBoxColumn.DataPropertyName = "TransportName";
-            this.TransportNameDataGridViewTextBoxColumn.HeaderText = "Имя транспорта";
-            this.TransportNameDataGridViewTextBoxColumn.Name = "TransportNameDataGridViewTextBoxColumn";
-            this.TransportNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // distanceDataGridViewTextBoxColumn
-            // 
-            this.distanceDataGridViewTextBoxColumn.DataPropertyName = "Distance";
-            this.distanceDataGridViewTextBoxColumn.HeaderText = "Пройденный путь";
-            this.distanceDataGridViewTextBoxColumn.Name = "distanceDataGridViewTextBoxColumn";
-            this.distanceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // FuelCosts
             // 
             this.FuelCosts.DataPropertyName = "FuelCosts";
             this.FuelCosts.HeaderText = "Расход топлива";
             this.FuelCosts.Name = "FuelCosts";
             this.FuelCosts.ReadOnly = true;
-            // 
-            // ITransportBindingSource
-            // 
-            this.ITransportBindingSource.DataSource = typeof(Transport.ITransport);
             // 
             // RemoveButton
             // 
@@ -188,6 +171,24 @@
             this.AddButton.Text = "Добавить траспорт";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // TransportNameDataGridViewTextBoxColumn
+            // 
+            this.TransportNameDataGridViewTextBoxColumn.DataPropertyName = "TransportName";
+            this.TransportNameDataGridViewTextBoxColumn.HeaderText = "Имя транспорта";
+            this.TransportNameDataGridViewTextBoxColumn.Name = "TransportNameDataGridViewTextBoxColumn";
+            this.TransportNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // distanceDataGridViewTextBoxColumn
+            // 
+            this.distanceDataGridViewTextBoxColumn.DataPropertyName = "Distance";
+            this.distanceDataGridViewTextBoxColumn.HeaderText = "Пройденный путь";
+            this.distanceDataGridViewTextBoxColumn.Name = "distanceDataGridViewTextBoxColumn";
+            this.distanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ITransportBindingSource
+            // 
+            this.ITransportBindingSource.DataSource = typeof(Transport.ITransport);
             // 
             // MainForm
             // 

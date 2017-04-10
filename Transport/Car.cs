@@ -21,18 +21,8 @@ namespace Transport
         /// Имя машины
         /// </summary>
         private string _transportName = "car";
-        /// <summary>
-        /// кол-во топлива
-        /// </summary>
-        private double _fuelCount;
-        /// <summary>
-        ///Расход на 100 км
-        /// </summary>
-        private int _fuelConsumption;
-        /// <summary>
-        /// Текущее кол-во топлива у машины
-        /// </summary>
-        private int _theCurrentAmountOfFuel;
+
+        private double _theCurrentAmountOfFuel;
 
         /// <summary>
         /// Пробег машины
@@ -57,37 +47,11 @@ namespace Transport
 
             set { _transportName = value; }
         }
-        /// <summary>
-        /// кол-во топлива
-        /// </summary>
-       /* public double FuelCount
-        {
-            get { return _fuelCount; }
-            set
-            {
-                if (value < 0)
-                    throw new InvalidOperationException("Неверно задан  количество топлива у машины");
-                _fuelCount = value;
-            }
-        }*/
-
-        /// <summary>
-        /// Расход на 100 км
-        /// </summary>
-      /*  public int FuelConsumption
-        {
-            get { return _fuelConsumption; }
-            set
-            {
-                if (value < 100)
-                    throw new InvalidOperationException("Неверно задан расход топлива у машины за 100 км");
-                _fuelConsumption = value;
-            }
-        }*/
+      
         /// <summary> 
         /// Количество топлива у машины
         /// </summary>
-        public int TheCurrentAmountOfFuel
+        public double TheCurrentAmountOfFuel
         {
             get { return _theCurrentAmountOfFuel; }
             set
@@ -115,12 +79,7 @@ namespace Transport
             {
                 return IsCanTravelDistance();
             }
-            set
-            {
-
-            }
-
-    
+            set { }
         }
     }
 }

@@ -85,5 +85,11 @@ namespace WinForms
         {
             Close();
         }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Transports = new List<ITransport>();
+            ITransportBindingSource.DataSource = Transports;
+        }
     }
 }
