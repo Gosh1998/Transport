@@ -66,9 +66,6 @@ namespace WinForms
                     var car = (Car) value;
                     TransportComboBox.SelectedIndex = 0;
                     TransportComboBox.Enabled = false;
-                    CarGroupBox.Visible = true;
-                    HelicopterGroupBox.Visible = false;
-                    HybridCarGroupBox.Visible = false;
                     CarGroupBox.Location = new Point(10, 65);
                     CurentFuelCarTextBox.Text = car.TheCurrentAmountOfFuel.ToString(CultureInfo.InvariantCulture);
                     SpacingCarTextBox.Text = car.Distance.ToString(CultureInfo.InvariantCulture);
@@ -79,9 +76,6 @@ namespace WinForms
                     var hybrid = (HybridCar) value;
                     TransportComboBox.SelectedIndex = 1;
                     TransportComboBox.Enabled = false;
-                    HybridCarGroupBox.Visible = true;
-                    HelicopterGroupBox.Visible = false;
-                    CarGroupBox.Visible = false;
                     HybridCarGroupBox.Location = new Point(10, 65);
                     NameHybridTextBox.Text = hybrid.TransportName;
                     FuelHybridTextBox.Text = hybrid.TheCurrentAmountOfFuel.ToString(CultureInfo.InvariantCulture);
@@ -95,9 +89,6 @@ namespace WinForms
                     var helicopter = (Helicopter) value;
                     TransportComboBox.SelectedIndex = 2;
                     TransportComboBox.Enabled = false;
-                    HelicopterGroupBox.Visible = true;
-                    CarGroupBox.Visible = false;
-                    HybridCarGroupBox.Visible = false;
                     HelicopterGroupBox.Location = new Point(10, 65);
                     NameHelicopterTextBox.Text = helicopter.TransportName;
                     FuelHelicopterTextBox.Text=helicopter.FuelConsumption.ToString(CultureInfo.InvariantCulture);
