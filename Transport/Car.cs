@@ -23,7 +23,22 @@ namespace Transport
         private string _transportName = "car";
 
         private double _theCurrentAmountOfFuel;
-
+        
+        /// <summary>
+        /// Конструктор с параметрами
+        /// </summary>
+        /// <param name="distance"></param>
+        /// <param name="theCurrent"></param>
+        public Car(int distance,double theCurrent)
+        {
+            Distance = DistanceChecker.DistanceValue(distance);
+            TheCurrentAmountOfFuel = theCurrent;
+        }
+        
+        public Car()
+        {
+            
+        }
         /// <summary>
         /// Пробег машины
         /// </summary>
@@ -31,12 +46,7 @@ namespace Transport
         {
             get { return _distance; }
 
-            set
-            {
-                if (value < 0)
-                    throw new InvalidOperationException("Неверно задан пробег траспорта");
-                _distance = value;
-            }
+            set { _distance = DistanceChecker.DistanceValue(value); }
         }
         /// <summary>
         /// Имя машины
@@ -45,7 +55,7 @@ namespace Transport
         {
             get { return _transportName; }
 
-            set { _transportName = value; }
+            set{ _transportName = value; }
         }
       
         /// <summary> 
@@ -57,7 +67,7 @@ namespace Transport
             set
             {
                 if (value < 0 || value > 1500)
-                    throw new InvalidOperationException("Неверно задана текущее кол-во топливо у машины");
+                    throw new ArgumentException("Неверно задана текущее кол-во топливо у машины");
                 _theCurrentAmountOfFuel = value;
             }
         }

@@ -6,7 +6,6 @@ namespace Transport
  /// </summary>
     [Serializable]
     public class Helicopter : ITransport
-
     {
        
         /// <summary>
@@ -28,7 +27,7 @@ namespace Transport
         /// <summary>
         /// Скорость вертолета
         /// </summary>
-        private uint _speed;
+        private int _speed;
         /// <summary>
         /// Объем бака у вертолета
         /// </summary>
@@ -44,7 +43,7 @@ namespace Transport
             set
             {
                 if (value < 380)
-                    throw new InvalidOperationException("Расход топлива у вертолета должен быть больше 380");
+                    throw new ArgumentException("Расход топлива у вертолета должен быть больше 380");
                 _fuelConsumptionPerHour = value;
             }
         }
@@ -56,8 +55,8 @@ namespace Transport
             get { return _fuelConsumption; }
             set
             {
-                if (value < 100)
-                    throw new InvalidOperationException("Неверно задан расход топлива у вертолета(больше 380)");
+                if (value <= 100)
+                    throw new ArgumentException("Неверно задан расход топлива у вертолета(больше 100)");
                 _fuelConsumption = value;
             }
         }
@@ -68,12 +67,7 @@ namespace Transport
         {
             get { return _distance; }
 
-            set
-            {
-                if (value < 0)
-                    throw new InvalidOperationException("Неверно задан пробег траспорта");
-                _distance = value;
-            }
+            set { _distance = DistanceChecker.DistanceValue(value); }
         }
         /// <summary>
         /// Имя транспорта
@@ -87,13 +81,13 @@ namespace Transport
         /// <summary>
         /// Скорость вертолета
         /// </summary>
-        public uint Speed
+        public int Speed
         {
             get { return _speed; }
             set
             {
-                if (value  > 380)
-                    throw new InvalidOperationException("Неверно задан скорость вертолета");
+                if (value  > 380 || value==0)
+                    throw new ArgumentException("Неверно задан скорость вертолета");
                 _speed = value;
             }
         }
@@ -110,7 +104,7 @@ namespace Transport
             set
             {
                 if (value <= 0 || value >= 200)
-                    throw new InvalidOperationException("Объем бака не должен превышать 200 л");
+                    throw new ArgumentException("Объем бака не должен превышать 200 л");
                 _volumeOfTheHelicopter = value;
             }
         }

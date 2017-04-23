@@ -47,6 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HybridCarGroupBox = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TheCurrentOfElectricityTextBox = new System.Windows.Forms.TextBox();
             this.ElectricityHybridTextBox = new System.Windows.Forms.TextBox();
             this.PowerHybridTextBox = new System.Windows.Forms.TextBox();
             this.SpacingHybridTextBox = new System.Windows.Forms.TextBox();
@@ -83,7 +85,7 @@
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GroupBox1.Size = new System.Drawing.Size(189, 355);
+            this.GroupBox1.Size = new System.Drawing.Size(190, 374);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
             // 
@@ -101,7 +103,7 @@
             this.HelicopterGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelicopterGroupBox.Name = "HelicopterGroupBox";
             this.HelicopterGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelicopterGroupBox.Size = new System.Drawing.Size(179, 245);
+            this.HelicopterGroupBox.Size = new System.Drawing.Size(179, 268);
             this.HelicopterGroupBox.TabIndex = 6;
             this.HelicopterGroupBox.TabStop = false;
             // 
@@ -188,7 +190,7 @@
             this.CarGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CarGroupBox.Name = "CarGroupBox";
             this.CarGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CarGroupBox.Size = new System.Drawing.Size(177, 245);
+            this.CarGroupBox.Size = new System.Drawing.Size(177, 268);
             this.CarGroupBox.TabIndex = 5;
             this.CarGroupBox.TabStop = false;
             // 
@@ -241,12 +243,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 13);
+            this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Колличество топлива";
+            this.label2.Text = "Количество топлива";
             // 
             // HybridCarGroupBox
             // 
+            this.HybridCarGroupBox.Controls.Add(this.label14);
+            this.HybridCarGroupBox.Controls.Add(this.TheCurrentOfElectricityTextBox);
             this.HybridCarGroupBox.Controls.Add(this.ElectricityHybridTextBox);
             this.HybridCarGroupBox.Controls.Add(this.PowerHybridTextBox);
             this.HybridCarGroupBox.Controls.Add(this.SpacingHybridTextBox);
@@ -261,9 +265,26 @@
             this.HybridCarGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HybridCarGroupBox.Name = "HybridCarGroupBox";
             this.HybridCarGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HybridCarGroupBox.Size = new System.Drawing.Size(179, 245);
+            this.HybridCarGroupBox.Size = new System.Drawing.Size(179, 268);
             this.HybridCarGroupBox.TabIndex = 4;
             this.HybridCarGroupBox.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 225);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 13);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Текущее кол-во эл-во";
+            // 
+            // TheCurrentOfElectricityTextBox
+            // 
+            this.TheCurrentOfElectricityTextBox.Location = new System.Drawing.Point(13, 241);
+            this.TheCurrentOfElectricityTextBox.Name = "TheCurrentOfElectricityTextBox";
+            this.TheCurrentOfElectricityTextBox.Size = new System.Drawing.Size(107, 20);
+            this.TheCurrentOfElectricityTextBox.TabIndex = 10;
+            this.TheCurrentOfElectricityTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TheCurrentOfElectricityTextBox_KeyPress);
             // 
             // ElectricityHybridTextBox
             // 
@@ -341,9 +362,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(10, 145);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 13);
+            this.label10.Size = new System.Drawing.Size(110, 13);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Колличество топлива";
+            this.label10.Text = "Количество топлива";
             // 
             // label9
             // 
@@ -357,7 +378,7 @@
             // CancelButton
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CancelButton.Location = new System.Drawing.Point(84, 318);
+            this.CancelButton.Location = new System.Drawing.Point(84, 337);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 22);
@@ -369,7 +390,7 @@
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.OKButton.Location = new System.Drawing.Point(6, 318);
+            this.OKButton.Location = new System.Drawing.Point(6, 337);
             this.OKButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 22);
@@ -407,7 +428,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(213, 379);
+            this.ClientSize = new System.Drawing.Size(214, 398);
             this.Controls.Add(this.GroupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -460,5 +481,7 @@
         private System.Windows.Forms.TextBox SpacingHybridTextBox;
         private System.Windows.Forms.TextBox FuelHybridTextBox;
         private System.Windows.Forms.TextBox NameHybridTextBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox TheCurrentOfElectricityTextBox;
     }
 }

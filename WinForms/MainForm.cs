@@ -14,7 +14,7 @@ namespace WinForms
     public partial class MainForm : Form
     {
         
-        public List<ITransport> Transports;
+        private List<ITransport> Transports;
 
         public MainForm()
         {

@@ -39,9 +39,10 @@ namespace WinForms
                     {
                         TransportName = Convert.ToString(NameHybridTextBox.Text),
                         Distance = Convert.ToInt32(SpacingHybridTextBox.Text),
-                        CurrentAmountOfElectricity = Convert.ToInt32(ElectricityHybridTextBox.Text),
+                        ElectricityConsumption = Convert.ToInt32(ElectricityHybridTextBox.Text),
                         PowerOfBattery = Convert.ToInt32(PowerHybridTextBox.Text),
-                        TheCurrentAmountOfFuel = Convert.ToDouble(FuelHybridTextBox.Text)
+                        TheCurrentAmountOfFuel = Convert.ToDouble(FuelHybridTextBox.Text),
+                        CurrentAmountOfElectricity = Convert.ToInt32(TheCurrentOfElectricityTextBox.Text)
                     };
                     _transport = hybrid;
                 }
@@ -82,6 +83,7 @@ namespace WinForms
                     SpacingHybridTextBox.Text = hybrid.Distance.ToString(CultureInfo.InvariantCulture);
                     PowerHybridTextBox.Text=hybrid.PowerOfBattery.ToString(CultureInfo.InvariantCulture);
                     ElectricityHybridTextBox.Text=hybrid.CurrentAmountOfElectricity.ToString(CultureInfo.InvariantCulture);
+                    TheCurrentOfElectricityTextBox.Text =hybrid.CurrentAmountOfElectricity.ToString(CultureInfo.InvariantCulture);
 
                 }
                 else if (value is Helicopter)
@@ -209,6 +211,11 @@ namespace WinForms
         private void CurentFuelCarTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar!=',')
+                e.Handled = true;
+        }
+        private void TheCurrentOfElectricityTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 )
                 e.Handled = true;
         }
     }
