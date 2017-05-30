@@ -1,5 +1,4 @@
 ﻿using System;
-
 using NUnit.Framework;
 using Transport;
 
@@ -16,7 +15,7 @@ namespace UnitTests.Transport
         /// </summary>
         /// <param name="theCurrentAmountOfFuel"></param>
         [Test]
-        [TestCase(0, TestName = "Тестирование свойства TheCurrentAmountOfFuel при присваивании 0",
+        [TestCase(-1, TestName = "Тестирование свойства TheCurrentAmountOfFuel при присваивании 0",
             ExpectedResult =0)]
         [TestCase(1500, TestName = "Тестирование свойства TheCurrentAmountOfFuel при присваивании 1500",
              ExpectedResult =1500 )]

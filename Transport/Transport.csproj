@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="TransportBase.cs" />
     <Compile Include="DistanceChecker.cs" />
     <Compile Include="Helicopter.cs" />
     <Compile Include="HybridCar.cs" />

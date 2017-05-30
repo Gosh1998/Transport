@@ -2,7 +2,6 @@
 using NUnit.Framework;
 using Transport;
 
-
 namespace UnitTests.Transport
 {
     /// <summary>
@@ -103,13 +102,13 @@ namespace UnitTests.Transport
         /// <param name="currentAmountOfElectricity"></param>
         /// <param name="theCurrentAmountOfFuel"></param>
         [Test]
-        [TestCase(1, 1, 1, TestName = "Тестирование метода GoTheDistance при значениях 1,1,1",
+        [TestCase(1, 1,1 , TestName = "Тестирование метода IsCanTravelDistance при значениях 1,1,1",
             ExpectedResult = 100)]
-        [TestCase(450, 100, 200, TestName = "Тестирование метода GoTheDistance при значениях 450,100,200",
+        [TestCase(450, 100, 200, TestName = "Тестирование метода IsCanTravelDistance при значениях 450,100,200",
             ExpectedResult = 425.0)]
-        [TestCase(0, 100, 0, TestName = "Тестирование GoTheDistance при присваивании значений 0, 100, 0",
+        [TestCase(0, 100, 0, TestName = "Тестирование IsCanTravelDistance при присваивании значений 0, 100, 0",
             ExpectedException = typeof (ArgumentException))]
-        [TestCase(-12, -12, 0, TestName = "Тестирование GoTheDistance при присваивании значений -12, -12, 0",
+        [TestCase(-12, -12, 0, TestName = "Тестирование IsCanTravelDistance при присваивании значений -12, -12, 0",
             ExpectedException = typeof (ArgumentException))]
         public double IsCanTravelDistanceTest(int distance, int currentAmountOfElectricity, int theCurrentAmountOfFuel)
         {

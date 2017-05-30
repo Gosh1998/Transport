@@ -10,7 +10,7 @@ namespace Transport
     /// класс машины
     /// </summary>
     [Serializable]
-    public class Car : ITransport
+    public class Car : TransportBase
     {
    
         /// <summary>
@@ -39,19 +39,11 @@ namespace Transport
         {
             
         }
-        /// <summary>
-        /// Пробег машины
-        /// </summary>
-        public int Distance
-        {
-            get { return _distance; }
 
-            set { _distance = DistanceChecker.DistanceValue(value); }
-        }
         /// <summary>
         /// Имя машины
         /// </summary>
-        public string TransportName
+        public override string TransportName
         {
             get { return _transportName; }
 
@@ -76,14 +68,14 @@ namespace Transport
         /// метод расчета расхода топлива
         /// </summary>
         /// <returns>расход топлива </returns>
-        public double IsCanTravelDistance()
+        public override double IsCanTravelDistance()
         {
-            return TheCurrentAmountOfFuel * 100 / _distance;
+            return TheCurrentAmountOfFuel * 100 / Distance;
         }
         /// <summary>
         /// расчет расход топлива
         /// </summary>
-        public double FuelCosts
+        public override double FuelCosts
         {
             get
             {

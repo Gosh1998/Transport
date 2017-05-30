@@ -30,208 +30,204 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CreateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.TransportDataGridView = new System.Windows.Forms.DataGridView();
-            this.ITransportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.RemoveButton = new System.Windows.Forms.Button();
-            this.ModifyButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.transportNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.distanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fuelCostsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MenuStrip1.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransportDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ITransportBindingSource)).BeginInit();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.FileeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreatetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpennToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exittToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TransportGridView = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonModify = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransportGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // MenuStrip1
+            // menuStrip2
             // 
-            this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileToolStripMenuItem});
-            this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(523, 24);
-            this.MenuStrip1.TabIndex = 1;
-            this.MenuStrip1.Text = "menuStrip1";
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileeToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(582, 24);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // FileToolStripMenuItem
+            // FileeToolStripMenuItem
             // 
-            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ExitToolStripMenuItem,
-            this.OpenToolStripMenuItem,
-            this.SaveToolStripMenuItem,
-            this.CreateToolStripMenuItem});
-            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.FileToolStripMenuItem.Text = "Файл";
+            this.FileeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreatetToolStripMenuItem,
+            this.OpennToolStripMenuItem,
+            this.SaveeToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
+            this.exittToolStripMenuItem});
+            this.FileeToolStripMenuItem.Name = "FileeToolStripMenuItem";
+            this.FileeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.FileeToolStripMenuItem.Text = "Файл";
             // 
-            // ExitToolStripMenuItem
+            // CreatetToolStripMenuItem
             // 
-            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.ExitToolStripMenuItem.Text = "Создать";
-            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            this.CreatetToolStripMenuItem.Name = "CreatetToolStripMenuItem";
+            this.CreatetToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.CreatetToolStripMenuItem.Text = "Создать";
+            this.CreatetToolStripMenuItem.Click += new System.EventHandler(this.CreateToolStripMenuItem_Click);
             // 
-            // OpenToolStripMenuItem
+            // OpennToolStripMenuItem
             // 
-            this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.OpenToolStripMenuItem.Text = "Открыть";
-            this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
+            this.OpennToolStripMenuItem.Name = "OpennToolStripMenuItem";
+            this.OpennToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.OpennToolStripMenuItem.Text = "Открыть";
+            this.OpennToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
-            // SaveToolStripMenuItem
+            // SaveeToolStripMenuItem
             // 
-            this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.SaveToolStripMenuItem.Text = "Сохранить";
-            this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            this.SaveeToolStripMenuItem.Name = "SaveeToolStripMenuItem";
+            this.SaveeToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.SaveeToolStripMenuItem.Text = "Сохранить";
+            this.SaveeToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
-            // CreateToolStripMenuItem
+            // saveAsToolStripMenuItem
             // 
-            this.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem";
-            this.CreateToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.CreateToolStripMenuItem.Text = "Выход";
-            this.CreateToolStripMenuItem.Click += new System.EventHandler(this.CreateToolStripMenuItem_Click);
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.saveAsToolStripMenuItem.Text = "Сохранить как";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
-            // GroupBox1
+            // exittToolStripMenuItem
             // 
-            this.GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.exittToolStripMenuItem.Name = "exittToolStripMenuItem";
+            this.exittToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.exittToolStripMenuItem.Text = "Выход";
+            this.exittToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // TransportGridView
+            // 
+            this.TransportGridView.AllowUserToAddRows = false;
+            this.TransportGridView.AllowUserToDeleteRows = false;
+            this.TransportGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupBox1.Controls.Add(this.TransportDataGridView);
-            this.GroupBox1.Location = new System.Drawing.Point(12, 27);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(499, 225);
-            this.GroupBox1.TabIndex = 2;
-            this.GroupBox1.TabStop = false;
+            this.TransportGridView.AutoGenerateColumns = false;
+            this.TransportGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TransportGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransportGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransportGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn1});
+            this.TransportGridView.DataSource = this.bindingSource1;
+            this.TransportGridView.Location = new System.Drawing.Point(0, 27);
+            this.TransportGridView.Name = "TransportGridView";
+            this.TransportGridView.ReadOnly = true;
+            this.TransportGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TransportGridView.Size = new System.Drawing.Size(582, 121);
+            this.TransportGridView.TabIndex = 1;
             // 
-            // TransportDataGridView
+            // bindingSource1
             // 
-            this.TransportDataGridView.AllowUserToAddRows = false;
-            this.TransportDataGridView.AllowUserToDeleteRows = false;
-            this.TransportDataGridView.AutoGenerateColumns = false;
-            this.TransportDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TransportDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransportDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.transportNameDataGridViewTextBoxColumn,
-            this.distanceDataGridViewTextBoxColumn,
-            this.fuelCostsDataGridViewTextBoxColumn});
-            this.TransportDataGridView.DataSource = this.ITransportBindingSource;
-            this.TransportDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TransportDataGridView.Location = new System.Drawing.Point(3, 16);
-            this.TransportDataGridView.Name = "TransportDataGridView";
-            this.TransportDataGridView.ReadOnly = true;
-            this.TransportDataGridView.Size = new System.Drawing.Size(493, 206);
-            this.TransportDataGridView.TabIndex = 0;
+            this.bindingSource1.DataSource = typeof(Transport.ITransport);
             // 
-            // ITransportBindingSource
+            // buttonAdd
             // 
-            this.ITransportBindingSource.DataSource = typeof(Transport.ITransport);
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAdd.Location = new System.Drawing.Point(12, 169);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 2;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // RemoveButton
+            // buttonModify
             // 
-            this.RemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.RemoveButton.Location = new System.Drawing.Point(174, 258);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
-            this.RemoveButton.TabIndex = 3;
-            this.RemoveButton.Text = "Удалить";
-            this.RemoveButton.UseVisualStyleBackColor = true;
-            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            this.buttonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonModify.Location = new System.Drawing.Point(93, 169);
+            this.buttonModify.Name = "buttonModify";
+            this.buttonModify.Size = new System.Drawing.Size(75, 23);
+            this.buttonModify.TabIndex = 3;
+            this.buttonModify.Text = "Изменить";
+            this.buttonModify.UseVisualStyleBackColor = true;
+            this.buttonModify.Click += new System.EventHandler(this.ModifyButton_Click);
             // 
-            // ModifyButton
+            // buttonRemove
             // 
-            this.ModifyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ModifyButton.Location = new System.Drawing.Point(93, 258);
-            this.ModifyButton.Name = "ModifyButton";
-            this.ModifyButton.Size = new System.Drawing.Size(75, 23);
-            this.ModifyButton.TabIndex = 2;
-            this.ModifyButton.Text = "Изменить";
-            this.ModifyButton.UseVisualStyleBackColor = true;
-            this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click);
+            this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonRemove.Location = new System.Drawing.Point(174, 169);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemove.TabIndex = 4;
+            this.buttonRemove.Text = "Удалить";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
-            // AddButton
+            // dataGridViewTextBoxColumn2
             // 
-            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddButton.Location = new System.Drawing.Point(12, 258);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 1;
-            this.AddButton.Text = "Добавить траспорт";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TransportName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Имя транспорта";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // transportNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.transportNameDataGridViewTextBoxColumn.DataPropertyName = "TransportName";
-            this.transportNameDataGridViewTextBoxColumn.HeaderText = "Имя транспорта";
-            this.transportNameDataGridViewTextBoxColumn.Name = "transportNameDataGridViewTextBoxColumn";
-            this.transportNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Distance";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Пробег";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // distanceDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.distanceDataGridViewTextBoxColumn.DataPropertyName = "Distance";
-            this.distanceDataGridViewTextBoxColumn.HeaderText = "Пробег";
-            this.distanceDataGridViewTextBoxColumn.Name = "distanceDataGridViewTextBoxColumn";
-            this.distanceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fuelCostsDataGridViewTextBoxColumn
-            // 
-            this.fuelCostsDataGridViewTextBoxColumn.DataPropertyName = "FuelCosts";
-            this.fuelCostsDataGridViewTextBoxColumn.HeaderText = "Расход топлива";
-            this.fuelCostsDataGridViewTextBoxColumn.Name = "fuelCostsDataGridViewTextBoxColumn";
-            this.fuelCostsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "FuelCosts";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Расход";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(523, 293);
-            this.Controls.Add(this.RemoveButton);
-            this.Controls.Add(this.GroupBox1);
-            this.Controls.Add(this.ModifyButton);
-            this.Controls.Add(this.MenuStrip1);
-            this.Controls.Add(this.AddButton);
-            this.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.ClientSize = new System.Drawing.Size(582, 204);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.buttonModify);
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.TransportGridView);
+            this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.MenuStrip1;
+            this.MainMenuStrip = this.menuStrip2;
             this.Name = "MainForm";
-            this.Text = "Расход топлива транспортов";
-            this.MenuStrip1.ResumeLayout(false);
-            this.MenuStrip1.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TransportDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ITransportBindingSource)).EndInit();
+            this.Text = "Transport - GGG";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransportGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip MenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem OpenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SaveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
-        private System.Windows.Forms.GroupBox GroupBox1;
-        private System.Windows.Forms.DataGridView TransportDataGridView;
-        private System.Windows.Forms.BindingSource ITransportBindingSource;
-        private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button ModifyButton;
-        private System.Windows.Forms.Button RemoveButton;
-        private System.Windows.Forms.ToolStripMenuItem CreateToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transportNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn distanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fuelCostsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem FileeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CreatetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpennToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SaveeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exittToolStripMenuItem;
+        private System.Windows.Forms.DataGridView TransportGridView;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonModify;
+        private System.Windows.Forms.Button buttonRemove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
 

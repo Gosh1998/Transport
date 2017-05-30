@@ -15,7 +15,7 @@ namespace WinForms
 {
     public partial class AddForm : Form
     {
-        private ITransport _transport;
+        
         /// <summary>
         /// Создание и изменение транспортов
         /// </summary>
@@ -23,99 +23,18 @@ namespace WinForms
         {
             get
             {
-                if (TransportComboBox.SelectedIndex == 0)
-                {
-                    var car = new Car
-                    {
-                        Distance = Convert.ToInt32(SpacingCarTextBox.Text),
-                        TheCurrentAmountOfFuel = Convert.ToDouble(CurentFuelCarTextBox.Text),
-                        TransportName = Convert.ToString(NameCarTextBox.Text)
-                    };
-                    _transport = car;
-                }
-                else if (TransportComboBox.SelectedIndex == 1)
-                {
-                    var hybrid = new HybridCar
-                    {
-                        TransportName = Convert.ToString(NameHybridTextBox.Text),
-                        Distance = Convert.ToInt32(SpacingHybridTextBox.Text),
-                        ElectricityConsumption = Convert.ToInt32(ElectricityHybridTextBox.Text),
-                        PowerOfBattery = Convert.ToInt32(PowerHybridTextBox.Text),
-                        TheCurrentAmountOfFuel = Convert.ToDouble(FuelHybridTextBox.Text),
-                        CurrentAmountOfElectricity = Convert.ToInt32(TheCurrentOfElectricityTextBox.Text)
-                    };
-                    _transport = hybrid;
-                }
-                else if (TransportComboBox.SelectedIndex == 2)
-                {
-                    var helicopter = new Helicopter
-                    {
-                        TransportName = Convert.ToString(NameHelicopterTextBox.Text),
-                        Distance = Convert.ToInt32(SpacingHelicopterTextBox.Text),
-                        FuelConsumption = Convert.ToDouble(FuelHelicopterTextBox.Text),
-                        VolumeOfTheTank = Convert.ToInt32(VolumeHelicopterTextBox.Text)
-
-                    };
-                    _transport = helicopter;
-                }
-                    return _transport;
+                var cathThrowTransports = transportControl1.Transports; 
+                return transportControl1.Transports;
             }
             set
             {
-                if (value is Car)
-                {
-                    var car = (Car) value;
-                    TransportComboBox.SelectedIndex = 0;
-                    TransportComboBox.Enabled = false;
-                    CarGroupBox.Location = new Point(10, 65);
-                    CurentFuelCarTextBox.Text = car.TheCurrentAmountOfFuel.ToString(CultureInfo.InvariantCulture);
-                    SpacingCarTextBox.Text = car.Distance.ToString(CultureInfo.InvariantCulture);
-                    NameCarTextBox.Text = car.TransportName;
-                }
-                else if (value is HybridCar)
-                {
-                    var hybrid = (HybridCar) value;
-                    TransportComboBox.SelectedIndex = 1;
-                    TransportComboBox.Enabled = false;
-                    HybridCarGroupBox.Location = new Point(10, 65);
-                    NameHybridTextBox.Text = hybrid.TransportName;
-                    FuelHybridTextBox.Text = hybrid.TheCurrentAmountOfFuel.ToString(CultureInfo.InvariantCulture);
-                    SpacingHybridTextBox.Text = hybrid.Distance.ToString(CultureInfo.InvariantCulture);
-                    PowerHybridTextBox.Text=hybrid.PowerOfBattery.ToString(CultureInfo.InvariantCulture);
-                    ElectricityHybridTextBox.Text=hybrid.CurrentAmountOfElectricity.ToString(CultureInfo.InvariantCulture);
-                    TheCurrentOfElectricityTextBox.Text =hybrid.CurrentAmountOfElectricity.ToString(CultureInfo.InvariantCulture);
-
-                }
-                else if (value is Helicopter)
-                {
-                    var helicopter = (Helicopter) value;
-                    TransportComboBox.SelectedIndex = 2;
-                    TransportComboBox.Enabled = false;
-                    HelicopterGroupBox.Location = new Point(10, 65);
-                    NameHelicopterTextBox.Text = helicopter.TransportName;
-                    FuelHelicopterTextBox.Text=helicopter.FuelConsumption.ToString(CultureInfo.InvariantCulture);
-                    VolumeHelicopterTextBox.Text=helicopter.VolumeOfTheTank.ToString(CultureInfo.InvariantCulture);
-                    SpacingHelicopterTextBox.Text=helicopter.Distance.ToString(CultureInfo.InvariantCulture);
-                }
+                transportControl1.Transports = value;
             }
         }
 
         public AddForm()
         {
             InitializeComponent();
-        }
-
-        private void TransportForm_Load(object sender, EventArgs e)
-        {
-            if (TransportComboBox.Enabled)
-            {
-                CarGroupBox.Visible = false;
-                CarGroupBox.Location= new Point(10, 65);
-                HybridCarGroupBox.Visible = false;
-                HybridCarGroupBox.Location = new Point(10, 65);
-                HelicopterGroupBox.Visible = false;
-                HelicopterGroupBox.Location = new Point(10, 65);
-            }
         }
 
         private void OKButton_Click(object sender, EventArgs e)
@@ -132,91 +51,10 @@ namespace WinForms
             }
         }
 
-        private void TransportComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (TransportComboBox.SelectedIndex == 0)
-            {
-                CarGroupBox.Visible = true;
-                HybridCarGroupBox.Visible = false;
-                HelicopterGroupBox.Visible = false;
-            }
-            else if (TransportComboBox.SelectedIndex == 1)
-            {
-                CarGroupBox.Visible = false;
-                HybridCarGroupBox.Visible = true;
-                HelicopterGroupBox.Visible = false;
-            }
-            else if (TransportComboBox.SelectedIndex == 2)
-            {
-                CarGroupBox.Visible = false;
-                HybridCarGroupBox.Visible = false;
-                HelicopterGroupBox.Visible = true;
-            }
-        }
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             Close();
-        }
-
-        private void SpacingCarTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar)&&e.KeyChar!=8)
-                e.Handled = true;
-        }
-
-        private void VolumeHelicopterTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-                e.Handled = true;
-        }
-
-        private void SpacingHelicopterTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-                e.Handled = true;
-        }
-
-        private void FuelHelicopterTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != ',')
-                e.Handled = true;
-        }
-
-        private void PowerHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-                e.Handled = true;
-        }
-
-        private void ElectricityHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-                e.Handled = true;
-        }
-
-        private void FuelHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar!=',')
-                e.Handled = true;
-        }
-
-        private void SpacingHybridTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-                e.Handled = true;
-        }
-
-        private void CurentFuelCarTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar!=',')
-                e.Handled = true;
-        }
-        private void TheCurrentOfElectricityTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 )
-                e.Handled = true;
         }
     }
 }

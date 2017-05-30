@@ -5,7 +5,7 @@ namespace Transport
  /// класс вертолета
  /// </summary>
     [Serializable]
-    public class Helicopter : ITransport
+    public class Helicopter : TransportBase
     {
        
         /// <summary>
@@ -60,19 +60,11 @@ namespace Transport
                 _fuelConsumption = value;
             }
         }
-        /// <summary>
-        /// Пробег
-        /// </summary>
-        public int Distance
-        {
-            get { return _distance; }
 
-            set { _distance = DistanceChecker.DistanceValue(value); }
-        }
         /// <summary>
         /// Имя транспорта
         /// </summary>
-        public string TransportName
+        public override string TransportName
         {
             get { return _transportName; }
 
@@ -112,18 +104,18 @@ namespace Transport
         /// метод расчета расхода топлива
         /// </summary>
         /// <returns>расход топлива </returns>
-        public double IsCanTravelDistance()
+        public override double IsCanTravelDistance()
         {
-            if (_fuelConsumption*_volumeOfTheHelicopter > _distance)
+            if (_fuelConsumption*_volumeOfTheHelicopter > Distance)
             {
                 
             }
-            return  FuelConsumption*100/_distance  ;
+            return  FuelConsumption*100/Distance  ;
         }
         /// <summary>
         /// расчет расхода топлива
         /// </summary>
-        public double FuelCosts
+        public override double FuelCosts
         {
             get
             {

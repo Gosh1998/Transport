@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Transport;
 
+
 namespace TransportConsole
 {
     class Program
@@ -30,11 +31,12 @@ namespace TransportConsole
             };
             list.Add(helicopter);
 
-            foreach (var transport in list)
-            {
-                Console.WriteLine("{0}. Средний расход топлива  составляет {1} л",transport.GetType(),transport.IsCanTravelDistance());
-            }
-            Console.ReadLine();
+            /* foreach (var transport in list)
+             {
+                 Console.WriteLine("{0}. Средний расход топлива  составляет {1} л",transport.GetType(),transport.IsCanTravelDistance());
+             }
+             Console.ReadLine();*/
+           
         }
     }
 }

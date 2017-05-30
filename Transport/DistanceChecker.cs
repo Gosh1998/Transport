@@ -9,9 +9,9 @@ namespace Transport
     {
         public static int DistanceValue(int distance)
         {
-            if (distance <= 0)
+            if (distance < 0)
             {
-                 throw new ArgumentException("Значение параметра должно быть положительным");
+                 throw new ArgumentException("Значение параметра должно быть  больше 0");
             }
             return distance;
         }

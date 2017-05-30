@@ -48,6 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\CarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CarControl.Designer.cs">
+      <DependentUpon>CarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HelicopterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HelicopterControl.Designer.cs">
+      <DependentUpon>HelicopterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HybridCarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HybridCarControl.Designer.cs">
+      <DependentUpon>HybridCarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TransportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TransportControl.Designer.cs">
+      <DependentUpon>TransportControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serializable.cs" />
     <Compile Include="TransportForm.cs">
       <SubType>Form</SubType>
@@ -63,6 +87,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\CarControl.resx">
+      <DependentUpon>CarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HelicopterControl.resx">
+      <DependentUpon>HelicopterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HybridCarControl.resx">
+      <DependentUpon>HybridCarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TransportControl.resx">
+      <DependentUpon>TransportControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

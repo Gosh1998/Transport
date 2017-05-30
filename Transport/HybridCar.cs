@@ -10,13 +10,9 @@ namespace Transport
     /// класс гибрид-машины
     /// </summary>
     [Serializable]
-    public class HybridCar : ITransport
+    public class HybridCar : TransportBase
     {
-        
-        /// <summary>
-        /// Пробег машины-гибрида
-        /// </summary>
-        private int _distance;
+
         /// <summary>
         /// Имя гибрид-машины
         /// </summary
@@ -39,19 +35,9 @@ namespace Transport
         private int _powerOfBattery;
        
         /// <summary>
-        /// Пробег машины-гибрида
-        /// </summary>
-        public int Distance
-        {
-            get { return _distance; }
-
-            set { _distance = DistanceChecker.DistanceValue(value); }
-        }
-
-        /// <summary>
         /// Имя модели
         /// </summary>
-        public string TransportName
+        public override string TransportName
         {
             get { return _transportName; }
 
@@ -122,7 +108,7 @@ namespace Transport
         /// </summary>
 
         /// <returns>Расход </returns>
-        public double IsCanTravelDistance()
+        public override double IsCanTravelDistance()
         {
             if (Distance <= 400) // Запас хода на эл-ве 400км
             {
@@ -134,7 +120,7 @@ namespace Transport
         /// <summary>
         /// Расчет расхода топлива
         /// </summary>
-        public double FuelCosts
+        public override double FuelCosts
         {
             get { return IsCanTravelDistance(); }
 

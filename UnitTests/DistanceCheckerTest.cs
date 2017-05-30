@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using Transport;
 
@@ -23,9 +19,9 @@ namespace UnitTests
         [TestCase(525, TestName = "Тестирование distance при присваивании 0.",ExpectedResult = 525)]
         [TestCase(-1, TestName = "Тестирование distance при присваивании -1",
             ExpectedException=typeof(ArgumentException))]
-        [TestCase(500, TestName = "Тестирование distance при присваивании MaxValue", 
+        [TestCase(500, TestName = "Тестирование distance при присваивании 500", 
             ExpectedResult = 500)]
-        [TestCase(0, TestName = "Тестирование distance при присваивании минимального допустимого целого числа числа",
+        [TestCase(0, TestName = "Тестирование distance при присваивании 0",
             ExpectedException=typeof(ArgumentException))]
         public int DistanceTest(int distance)
         {
